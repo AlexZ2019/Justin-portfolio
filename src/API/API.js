@@ -1,7 +1,7 @@
 import * as axios from "axios";
 
 const instance = axios.create({
-    baseURL: 'http://openapi.justin.ua/',
+    baseURL: 'https://openapi.justin.ua/',
 
 })
 
