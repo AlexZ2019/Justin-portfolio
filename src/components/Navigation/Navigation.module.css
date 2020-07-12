@@ -1,0 +1,457 @@
+.formField {
+  display: inline-block;
+}
+
+body {
+  padding-top: 14vmin;
+}
+@media (max-width: 700px) {
+  body {
+    padding-top: 13vmin;
+  }
+}
+@media (max-width: 575px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.navigation {
+  background-color: #164ce2;
+}
+.navigation button {
+  border-radius: 5px;
+  border: 0;
+  height: 55px;
+  background-color: #64ffff;
+  text-transform: uppercase;
+  font-size: 60%;
+  color: #164ce2;
+  font-weight: bold;
+  padding: 5px;
+  margin-top: 30px;
+}
+.navigation button:focus, .navigation button:active {
+  outline: none;
+}
+@media (max-width: 930px) {
+  .navigation button {
+    font-size: 53%;
+  }
+}
+@media (max-width: 767px) {
+  .navigation button {
+    font-size: 45%;
+  }
+}
+@media (max-width: 698px) {
+  .navigation button {
+    font-size: 40%;
+  }
+}
+@media (max-width: 655px) {
+  .navigation button {
+    font-size: 0.2em;
+  }
+}
+@media (max-width: 645px) {
+  .navigation button {
+    font-size: 6px;
+  }
+}
+@media (max-width: 640px) {
+  .navigation button {
+    font-size: 5.5px;
+  }
+}
+@media (max-width: 630px) {
+  .navigation button {
+    font-size: 5px;
+  }
+}
+@media (max-width: 575px) {
+  .navigation button {
+    font-size: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .navigation button {
+    border-radius: 5px;
+    border: 0;
+    height: 40px;
+    background-color: #64ffff;
+    text-transform: uppercase;
+    font-size: 60%;
+    color: #164ce2;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 25px;
+  }
+  .navigation button:focus, .navigation button:active {
+    outline: none;
+  }
+}
+@media (max-width: 767px) and (max-width: 930px) {
+  .navigation button {
+    font-size: 53%;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .navigation button {
+    font-size: 45%;
+  }
+}
+@media (max-width: 767px) and (max-width: 698px) {
+  .navigation button {
+    font-size: 40%;
+  }
+}
+@media (max-width: 767px) and (max-width: 655px) {
+  .navigation button {
+    font-size: 0.2em;
+  }
+}
+@media (max-width: 767px) and (max-width: 645px) {
+  .navigation button {
+    font-size: 6px;
+  }
+}
+@media (max-width: 767px) and (max-width: 640px) {
+  .navigation button {
+    font-size: 5.5px;
+  }
+}
+@media (max-width: 767px) and (max-width: 630px) {
+  .navigation button {
+    font-size: 5px;
+  }
+}
+@media (max-width: 767px) and (max-width: 575px) {
+  .navigation button {
+    font-size: 80%;
+  }
+}
+@media (max-width: 575px) {
+  .navigation button {
+    border-radius: 5px;
+    border: 0;
+    height: 100%;
+    background-color: #64ffff;
+    text-transform: uppercase;
+    font-size: 60%;
+    color: #164ce2;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 25px;
+  }
+  .navigation button:focus, .navigation button:active {
+    outline: none;
+  }
+}
+@media (max-width: 575px) and (max-width: 930px) {
+  .navigation button {
+    font-size: 53%;
+  }
+}
+@media (max-width: 575px) and (max-width: 767px) {
+  .navigation button {
+    font-size: 45%;
+  }
+}
+@media (max-width: 575px) and (max-width: 698px) {
+  .navigation button {
+    font-size: 40%;
+  }
+}
+@media (max-width: 575px) and (max-width: 655px) {
+  .navigation button {
+    font-size: 0.2em;
+  }
+}
+@media (max-width: 575px) and (max-width: 645px) {
+  .navigation button {
+    font-size: 6px;
+  }
+}
+@media (max-width: 575px) and (max-width: 640px) {
+  .navigation button {
+    font-size: 5.5px;
+  }
+}
+@media (max-width: 575px) and (max-width: 630px) {
+  .navigation button {
+    font-size: 5px;
+  }
+}
+@media (max-width: 575px) and (max-width: 575px) {
+  .navigation button {
+    font-size: 80%;
+  }
+}
+.navigation input {
+  background-color: #164ce2;
+  border: white solid 1px;
+  color: white;
+  padding: 10px;
+  margin-top: 35px;
+  width: 100%;
+  font-size: 80%;
+}
+.navigation input::placeholder {
+  color: white;
+}
+@media (max-width: 767px) {
+  .navigation input {
+    width: 80%;
+    font-size: 40.5%;
+    padding: 8px;
+    margin-top: 33px;
+  }
+}
+@media (max-width: 630px) {
+  .navigation input {
+    width: 70%;
+    font-size: 0;
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 36px;
+  }
+}
+.navigation img {
+  width: 150px;
+  padding-top: 7%;
+  margin-left: 15%;
+  margin-top: 5px;
+}
+@media (max-width: 800px) {
+  .navigation img {
+    margin-top: 10px;
+    width: 130px;
+    padding-top: 12%;
+  }
+}
+@media (max-width: 767px) {
+  .navigation img {
+    margin-left: 30%;
+    margin-top: 0;
+  }
+}
+@media (max-width: 700px) {
+  .navigation img {
+    width: 110px;
+    padding-top: 15%;
+  }
+}
+@media (max-width: 575px) {
+  .navigation img {
+    padding-top: 0;
+  }
+}
+
+.call_us {
+  margin-top: 45px;
+  margin-right: 7px;
+  white-space: nowrap;
+}
+.call_us a {
+  font-size: 85%;
+  color: white;
+}
+.call_us a:hover {
+  color: #64ffff;
+  text-decoration: none;
+}
+@media screen and (max-width: 920px) {
+  .call_us {
+    font-size: 90%;
+  }
+}
+@media (max-width: 698px) {
+  .call_us {
+    margin-top: 35px;
+  }
+}
+@media (max-width: 640px) {
+  .call_us {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .call_us {
+    font-size: 65%;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+}
+
+.navBtn {
+  width: 70%;
+  height: 65%;
+}
+
+.nav_menu {
+  margin-top: 35px;
+}
+.nav_menu a {
+  color: white;
+}
+.nav_menu a:hover {
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  .nav_menu {
+    margin-top: 26px;
+  }
+}
+@media (max-width: 630px) {
+  .nav_menu {
+    margin-top: 26px;
+  }
+}
+@media (max-width: 575px) {
+  .nav_menu {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .nav_menu a {
+    margin: 5px;
+  }
+}
+@media (max-width: 267px) {
+  .nav_menu {
+    font-size: 50%;
+  }
+}
+
+.menu_item {
+  background-color: #64ffff;
+}
+
+.dropdown-menu {
+  background-color: #64ffff;
+}
+
+.nav_menu_item {
+  background-color: #64ffff;
+  text-align: center;
+  padding: 5px;
+  font-size: 16px;
+  width: 110%;
+}
+@media (max-width: 767px) {
+  .nav_menu_item {
+    font-size: 12px;
+  }
+}
+@media (max-width: 575px) {
+  .nav_menu_item button {
+    border-radius: 5px;
+    border: 0;
+    height: 55px;
+    background-color: #64ffff;
+    text-transform: uppercase;
+    font-size: 60%;
+    color: #164ce2;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 25px;
+  }
+  .nav_menu_item button:focus, .nav_menu_item button:active {
+    outline: none;
+  }
+}
+@media (max-width: 575px) and (max-width: 930px) {
+  .nav_menu_item button {
+    font-size: 53%;
+  }
+}
+@media (max-width: 575px) and (max-width: 767px) {
+  .nav_menu_item button {
+    font-size: 45%;
+  }
+}
+@media (max-width: 575px) and (max-width: 698px) {
+  .nav_menu_item button {
+    font-size: 40%;
+  }
+}
+@media (max-width: 575px) and (max-width: 655px) {
+  .nav_menu_item button {
+    font-size: 0.2em;
+  }
+}
+@media (max-width: 575px) and (max-width: 645px) {
+  .nav_menu_item button {
+    font-size: 6px;
+  }
+}
+@media (max-width: 575px) and (max-width: 640px) {
+  .nav_menu_item button {
+    font-size: 5.5px;
+  }
+}
+@media (max-width: 575px) and (max-width: 630px) {
+  .nav_menu_item button {
+    font-size: 5px;
+  }
+}
+@media (max-width: 575px) and (max-width: 575px) {
+  .nav_menu_item button {
+    font-size: 80%;
+  }
+}
+
+#nav_menu_item_1 {
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px white solid;
+}
+
+#nav_menu_item_2 {
+  border-radius: 0 0 5px 5px;
+}
+
+.nav_burger {
+  height: 30px;
+  padding: 5px;
+  margin-left: 175px;
+}
+@media (max-width: 500px) {
+  .nav_burger {
+    margin-left: 150px;
+  }
+}
+@media (max-width: 455px) {
+  .nav_burger {
+    margin-left: 125px;
+  }
+}
+@media (max-width: 400px) {
+  .nav_burger {
+    margin-left: 100px;
+  }
+}
+@media (max-width: 360px) {
+  .nav_burger {
+    margin-left: 75px;
+  }
+}
+@media (max-width: 300px) {
+  .nav_burger {
+    margin-left: 55px;
+  }
+}
+@media (max-width: 288px) {
+  .nav_burger {
+    margin-left: 40px;
+  }
+}
+@media (max-width: 240px) {
+  .nav_burger {
+    margin-left: 30px;
+  }
+}
+
+/*# sourceMappingURL=Navigation.module.css.map */

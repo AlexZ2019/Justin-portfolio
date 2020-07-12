@@ -1,0 +1,42 @@
+$mainBackgroundColor: #164ce2
+$mainButtonColor: #64ffff
+$navigationHeight: 14vmin
+
+@mixin btns ($radius: 5px, $bgColor: $mainButtonColor, $textColor: $mainBackgroundColor, $fontSize: 60%, $buttonHeight: 55px, $marginTop: 25px, $btnPadding: 5px, $weight: bold)
+  button
+    border-radius: $radius
+    border: 0
+    height: $buttonHeight
+    background-color: $bgColor
+    text-transform: uppercase
+    font-size: $fontSize
+    color: $textColor
+    font-weight: $weight
+    padding: $btnPadding
+    margin-top: $marginTop
+    &:focus, &:active
+      outline: none
+    @media (max-width: 930px)
+      font-size: 53%
+    @media (max-width: 767px)
+      font-size: 45%
+    @media (max-width: 698px)
+      font-size: 40%
+    @media (max-width: 655px)
+      font-size: 0.2em
+    @media (max-width: 645px)
+      font-size: 6px
+    @media (max-width: 640px)
+      font-size: 5.5px
+    @media (max-width: 630px)
+      font-size: 5px
+    @media (max-width: 575px)
+      font-size: 80%
+@mixin departments
+  background-image: url("https://justin.ua/wp-content/uploads/2018/06/fon.png")
+  background-color: #f4f9ff
+  text-align: center
+  min-height: 500px
+
+.formField
+  display: inline-block

@@ -1,0 +1,58 @@
+.formField {
+  display: inline-block;
+}
+
+.footer {
+  background-color: #164ce2;
+  color: white;
+  padding: 25px 0;
+  font-size: 100%;
+}
+@media (max-width: 563px) {
+  .footer p {
+    font-size: 75%;
+  }
+}
+@media (max-width: 459px) {
+  .footer p {
+    font-size: 60%;
+  }
+}
+@media (max-width: 403px) {
+  .footer p {
+    font-size: 50%;
+  }
+}
+.footer ul {
+  border-right: 1px solid white;
+}
+.footer ul:last-child {
+  border-right: 0;
+}
+@media screen and (max-width: 767px) {
+  .footer ul {
+    border-right: 0;
+  }
+}
+.footer li {
+  margin: 0 0 10px 0;
+  list-style-type: none;
+}
+@media screen and (max-width: 767px) {
+  .footer li {
+    padding: 0;
+  }
+}
+.footer a {
+  color: white;
+}
+.footer a:hover {
+  color: #64ffff;
+  text-decoration: none;
+}
+
+#lastList {
+  border: 0;
+}
+
+/*# sourceMappingURL=Footer.module.css.map */

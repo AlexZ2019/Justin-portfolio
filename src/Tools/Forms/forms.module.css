@@ -1,0 +1,14 @@
+.formsControl input {
+  width: 200px;
+}
+
+.formsControl.error input {
+  border: 1px solid red;
+}
+
+.formsControl.error p {
+  color: red;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=forms.module.css.map */
