@@ -2,7 +2,21 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 import s from './Navigation.module.css'
 import logo from "../../images/logo_new.png"
+import {Field, reduxForm} from 'redux-form'
 
+
+let NavTrackingForm = ({handleSubmit}) => {
+    return (
+        <form onSubmit={handleSubmit}>
+        <Field name={'ttn_text'} component={'input'} type="text"/>
+        <button className="mt-5">
+            Get status
+        </button>
+    </form>)
+}
+let NavTrackingFormRedux = reduxForm({
+    form: 'navTracking'
+})(NavTrackingForm)
 const Navigation = (props) => {
     return <>
         <div className="container-fluid fixed-top">
@@ -18,15 +32,14 @@ const Navigation = (props) => {
                 <button className={s.navBtn + " col-md-1 col-sm-1 ml-md-3 ml-2 mr-md-4 d-none d-md-block d-sm-block"}>
                     кабінет приватним особам
                 </button>
-
                 <div className={`${s.call_us} col-md-1 col-sm-1 p-0 d-none d-md-block d-sm-block`}>
                     <a href="">0-800-301-661</a>
                 </div>
                 <div className="col-md-2 col-sm-2 p-0 ml-md-4 ml-sm-3 d-none d-md-block d-sm-block">
-                    <input onKeyPress={props} className={s.nav_field} type="text"
-                           placeholder='Введіть номер відпралення'/>
+                    <NavTrackingFormRedux onSubmit={props.onParcelCheck}/>
                 </div>
-                <div className={`dropdown col-md-1 col-sm-2 col-5 p-0 ml-md-4 ml-0 d-none d-md-block d-sm-block ${s.nav_menu}`}>
+                <div
+                    className={`dropdown col-md-1 col-sm-2 col-5 p-0 ml-md-4 ml-0 d-none d-md-block d-sm-block ${s.nav_menu}`}>
                     <a className={`nav-link dropdown-toggle `} href="#" id="navbarDropdown"
                        role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> menu </a>

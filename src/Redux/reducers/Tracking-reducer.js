@@ -1,4 +1,4 @@
-import TrackingAPI from "../../API/API";
+import TrackingApI from "../../API/API";
 import {reset} from "redux-form";
 import {isFetching} from "./Preloader-reducer";
 
@@ -7,9 +7,8 @@ const GET_STATUS = 'GET_STATUS'
 let initialState = {
     result: 'Введіть номер ТТН посилки',
     // ttn_text: ''
-
 }
-const trackingReducer = (state = initialState, action) => {
+const TrackingReducer = (state = initialState, action) => {
     switch (action.type) {
         // case TTN_TEXT_CHANGE: {
         //     return {
@@ -35,7 +34,7 @@ export const setStatus = (result) => (
 
 export const getTracking = (ttn_text) => dispatch => {
     dispatch(isFetching(true))
-    TrackingAPI.getStatus(ttn_text).then(data => {
+    TrackingApI.getStatus(ttn_text).then(data => {
         dispatch(isFetching(false))
         if (data.status === 1) {
             dispatch(setStatus(data.result[0]))
@@ -46,5 +45,4 @@ export const getTracking = (ttn_text) => dispatch => {
     })
 }
 
-
-export default trackingReducer;
+export default TrackingReducer;

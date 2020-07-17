@@ -4,11 +4,7 @@ import Tracking from "./Tracking";
 import {getTracking} from "../../Redux/reducers/Tracking-reducer";
 
 
-class TrackingContainerAPI extends React.Component {
-
-    componentDidMount() {
-        console.log('render')
-    }
+class TrackingContainerApI extends React.Component {
 
     // ttn_text_to_state = (event) => {
     //     this.props.textChange(event.target.value)
@@ -21,21 +17,22 @@ class TrackingContainerAPI extends React.Component {
     }
 
     render() {
-        return <Tracking
-                         result={this.props.result}
-                         isFetching={this.props.isFetching}
-                         // ttn_text={this.props.ttn_text}
-                         // ttn_text_to_state={this.ttn_text_to_state}
-                         onParcelCheck={this.onParcelCheck}/>
+        return (
+            <Tracking
+            result={this.props.result}
+            isFetching={this.props.isFetching}
+            // ttn_text={this.props.ttn_text}
+            // ttn_text_to_state={this.ttn_text_to_state}
+            onParcelCheck={this.onParcelCheck}/>)
     }
 }
 
 let mapStateToProps = (state) => {
     return {
-        result: state.trackingReducer.result,
+        result: state.TrackingReducer.result,
         isFetching: state.PreloaderReducer.isFetching
         // ttn_text: state.trackingReducer.ttn_text
     }
 }
 
-export default connect(mapStateToProps, {getTracking})(TrackingContainerAPI)
+export default connect(mapStateToProps, {getTracking})(TrackingContainerApI)

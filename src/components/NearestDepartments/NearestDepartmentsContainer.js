@@ -1,13 +1,11 @@
 import React from "react";
-import TheNearestDepartments from "./TheNearestDepartments";
+import NearestDepartments from "./NearestDepartments";
 import {connect} from "react-redux";
-import {getTND} from "../../Redux/reducers/TheNearestDepartment-reducer";
+import {getTnD} from "../../Redux/reducers/NearestDepartment-reducer";
 
 
-class TheNearestDepartmentsAPI extends React.Component {
-    componentDidMount() {
-        console.log('render')
-    }
+class NearestDepartmentsApI extends React.Component {
+
     // address_text_to_state = (event) => {
     //     this.props.textChange(event.target.value)
     // }
@@ -15,22 +13,21 @@ class TheNearestDepartmentsAPI extends React.Component {
     //     this.props.getTND(this.props.address_text)
     // }
     onAddressCheck = (values) => {
-        this.props.getTND(values.address_text)
+        this.props.getTnD(values.address_text)
     }
     render() {
-        return <TheNearestDepartments result={this.props.result}
-                                      isFetching={this.props.isFetching}
+        return (
+            <NearestDepartments result={this.props.result} isFetching={this.props.isFetching}
                                       // address_text={this.props.address_text}
                                       // address_text_to_state={this.address_text_to_state}
-                                      onAddressCheck={this.onAddressCheck}
-        />
+                                      onAddressCheck={this.onAddressCheck}/>)
     }
 }
 let mapDispatchToProps = (state) => {
     return {
-        result: state.TheNearestDepartmentsReducer.result,
+        result: state.NearestDepartmentsReducer.result,
         isFetching: state.PreloaderReducer.isFetching
         // address_text: state.TheNearestDepartmentsReducer.address_text
     }
 }
-export default connect (mapDispatchToProps, {getTND}) (TheNearestDepartmentsAPI)
+export default connect (mapDispatchToProps, {getTnD}) (NearestDepartmentsApI)

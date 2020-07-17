@@ -1,5 +1,5 @@
 import trackingReducer, {setStatus} from "./Tracking-reducer";
-import TheNearestDepartmentsReducer, {setStatus as setStatusForTND} from "./TheNearestDepartment-reducer";
+import TheNearestDepartmentsReducer, {setStatus as setStatusForTND} from "./NearestDepartment-reducer";
 
 let state = {
     date: "2019-10-23",

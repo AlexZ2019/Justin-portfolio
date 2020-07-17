@@ -1,12 +1,13 @@
 import React from "react";
-import s from './TheNearestDepartment.module.css'
+import s from './NearestDepartment.module.css'
 import {Field, reduxForm} from "redux-form";
 import {Input} from "../../Tools/Forms/Forms";
 import {required} from "../../Tools/Validators/Validators";
-import Preloader from "../Common/Preloader";
+import Preloader from "../Common/Preloader/Preloader";
 
-const TNDForm = ({handleSubmit, ...props}) => {
-    return <form onSubmit={handleSubmit}>
+const TnDForm = ({handleSubmit, ...props}) => {
+    return (
+        <form onSubmit={handleSubmit}>
         <div className="row">
             <div className="offset-5">
                 <Field name={'address_text'} component={Input} validate={[required]} type="text" className='mt-5 mr-3'/>
@@ -17,15 +18,18 @@ const TNDForm = ({handleSubmit, ...props}) => {
                 </button>
             </div>
         </div>
-    </form>
+    </form>)
 }
-const TNDFormRedux = reduxForm({
-    form: 'TNDForm'
-})(TNDForm)
+const TnDFormRedux = reduxForm({
+    form: 'TnDForm'
+})(TnDForm)
 
-let TheNearestDepartments = ({result, onAddressCheck, isFetching}) => {
-    if (isFetching) return <Preloader />
-    return <div className='container-fluid'>
+let NearestDepartments = ({result, onAddressCheck, isFetching}) => {
+    if (isFetching)
+        return (
+            <Preloader />)
+    else
+        return <div className='container-fluid'>
         <div className={`row ${s.tnd}`}>
             <div className='col-md-12'>
                 <h4 className='mt-5'>Знайдіть найближче відділення для Вас</h4>
@@ -33,7 +37,7 @@ let TheNearestDepartments = ({result, onAddressCheck, isFetching}) => {
                 {/*<button onClick={props.onAddressCheck}>*/}
                 {/*    Search*/}
                 {/*</button>*/}
-                <TNDFormRedux onSubmit={onAddressCheck}/>
+                <TnDFormRedux onSubmit={onAddressCheck}/>
                 {result ? <table className='col-md-12 mt-5 mb-5'>
                     <tr>
                         <th>
@@ -74,4 +78,4 @@ let TheNearestDepartments = ({result, onAddressCheck, isFetching}) => {
     </div>
 }
 
-export default TheNearestDepartments
+export default NearestDepartments

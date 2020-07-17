@@ -1,14 +1,14 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
-import trackingReducer from "./reducers/Tracking-reducer";
-import TheNearestDepartmentsReducer from "./reducers/TheNearestDepartment-reducer";
+import TrackingReducer from "./reducers/Tracking-reducer";
+import NearestDepartmentsReducer from "./reducers/NearestDepartment-reducer";
 import thunkMiddleware from "redux-thunk";
 import { reducer as formReducer } from 'redux-form'
 import PreloaderReducer from "./reducers/Preloader-reducer";
 
 
 let reducers = combineReducers({
-    trackingReducer,
-    TheNearestDepartmentsReducer,
+    TrackingReducer,
+    NearestDepartmentsReducer,
     form: formReducer,
     PreloaderReducer
 })

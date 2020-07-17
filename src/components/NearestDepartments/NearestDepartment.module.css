@@ -18,43 +18,33 @@ button {
   font-size: 60%;
   color: #164ce2;
   font-weight: bold;
-  padding: 5px;
+  padding: 7px;
   margin-top: 25px;
 }
 button:focus, button:active {
   outline: none;
 }
-@media (max-width: 930px) {
+@media (max-width: 1012px) {
   button {
-    font-size: 53%;
+    font-size: 55%;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 930px) {
+  button {
+    font-size: 50%;
+  }
+}
+@media (max-width: 860px) {
   button {
     font-size: 45%;
   }
 }
-@media (max-width: 698px) {
+@media (max-width: 767px) {
   button {
     font-size: 40%;
   }
 }
-@media (max-width: 655px) {
-  button {
-    font-size: 0.2em;
-  }
-}
-@media (max-width: 645px) {
-  button {
-    font-size: 6px;
-  }
-}
-@media (max-width: 640px) {
-  button {
-    font-size: 5.5px;
-  }
-}
-@media (max-width: 630px) {
+@media (max-width: 700px) {
   button {
     font-size: 5px;
   }
@@ -65,4 +55,4 @@ button:focus, button:active {
   }
 }
 
-/*# sourceMappingURL=TheNearestDepartment.module.css.map */
+/*# sourceMappingURL=NearestDepartment.module.css.map */

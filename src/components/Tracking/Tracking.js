@@ -3,23 +3,28 @@ import s from './Tracking.module.css'
 import {Field, reduxForm} from 'redux-form'
 import {minLengthCreator, required} from "../../Tools/Validators/Validators";
 import {Input} from "../../Tools/Forms/Forms";
-import Preloader from "../Common/Preloader";
+import Preloader from "../Common/Preloader/Preloader";
 
 const minLength9 = minLengthCreator(9)
 let TrackingForm = ({handleSubmit, isFetching}) => {
-    if (isFetching) return <Preloader />
-    return <form onSubmit={handleSubmit} className='col-md-12'>
-        <div className="row">
-            <div className="offset-5">
-                <Field className="mt-5 mr-2" name={'ttn_text'} component={Input} type="text" validate={[required, minLength9]}/>
-            </div>
-            <div>
-                <button className="mt-5">
-                    Get status
-                </button>
-            </div>
-        </div>
-    </form>
+    if (isFetching)
+        return (
+            <Preloader/>)
+    else
+        return (
+            <form onSubmit={handleSubmit} className='col-md-12'>
+                <div className="row">
+                    <div className="offset-5">
+                        <Field className="mt-5 mr-2" name={'ttn_text'} component={Input} type="text"
+                               validate={[required, minLength9]}/>
+                    </div>
+                    <div>
+                        <button className="mt-5">
+                            Get status
+                        </button>
+                    </div>
+                </div>
+            </form>)
 }
 const TrackingFormRedux = reduxForm({
     form: 'tracking'
@@ -34,7 +39,7 @@ let Tracking = ({result, onParcelCheck}) => {
                 {/*<button className="mt-5" onClick={props.onParcelCheck}>*/}
                 {/*    Get status*/}
                 {/*</button>*/}
-                <TrackingFormRedux onSubmit={onParcelCheck} />
+                <TrackingFormRedux onSubmit={onParcelCheck}/>
                 {result.orderNumber ? <div className='mt-5'>
                     <h4>Номер відправлення: {result.orderNumber}</h4>
                     <p>{result.orderDescription}</p>

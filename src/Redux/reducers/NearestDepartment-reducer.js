@@ -1,4 +1,4 @@
-import TrackingAPI from "../../API/API";
+import TrackingApI from "../../API/API";
 import {reset} from "redux-form";
 import {isFetching} from "./Preloader-reducer";
 
@@ -9,7 +9,7 @@ let initialState = {
     address_text: ''
 }
 
-const TheNearestDepartmentsReducer = (state = initialState, action) => {
+const NearestDepartmentsReducer = (state = initialState, action) => {
     switch (action.type) {
         // case ADDRESS_TEXT_CHANGE: {
         //     return {
@@ -32,9 +32,9 @@ export const setStatus = (result) => (
     {type: GET_DEPARTMENTS, result}
 )
 
-export const getTND = (address) => dispatch => {
+export const getTnD = (address) => dispatch => {
     dispatch(isFetching(true))
-    TrackingAPI.getTheNearestDepartments(address).then(data => {
+    TrackingApI.getNearestDepartments(address).then(data => {
         dispatch(isFetching(false))
             if (data.status === 1) {
                 dispatch(setStatus(data.result))
@@ -46,4 +46,4 @@ export const getTND = (address) => dispatch => {
         }
     )
 }
-export default TheNearestDepartmentsReducer
+export default NearestDepartmentsReducer
