@@ -4,7 +4,7 @@ import s from './forms.module.css'
 export const Input = ({input, meta, ...props}) => {
     let hasError = meta.error && meta.touched
     return <div className={s.formsControl + " " + (hasError ? s.error : '')}>
-        <input  {...input} {...props} type="text"/>
-        {hasError && <p className='mt-1'>{meta.error}</p>}
+        <input  {...input} {...props} type="text" placeholder="Введіть номер посилки"/>
+        {hasError && <p>{meta.error}</p>}
     </div>
 }

@@ -28,13 +28,13 @@ class DefaultContent extends React.Component {
                 <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <img className={`d-block w-100 ${s.slider_img}`} src={slide_1} alt="Первый слайд"/>
+                            <img className={`d-block w-100`} src={slide_1} alt="First slide"/>
                         </div>
                         <div className="carousel-item">
-                            <img className={`d-block w-100 ${s.slider_img}`} src={slide_1} alt="Второй слайд"/>
+                            <img className={`d-block w-100 ${s.slider_img}`} src={slide_1} alt="Second slide"/>
                         </div>
                         <div className="carousel-item">
-                            <img className={`d-block w-100 ${s.slider_img}`} src={slide_1} alt="Третий слайд"/>
+                            <img className={`d-block w-100 ${s.slider_img}`} src={slide_1} alt="Third slide"/>
                         </div>
                     </div>
                     <a className="carousel-control-prev" href="#carouselExampleControls" role="button"
@@ -54,7 +54,7 @@ class DefaultContent extends React.Component {
                 </div>
                 <div className={`container-fluid ${s.content}`}>
                     <div className={`row`}>
-                        <div className={`offset-md-1 mr-md-5 col-md-4 col-12 ${s.contentBlock}`}>
+                        <div className={` ${s.contentBlock}`}>
                             <img src="" alt=""/>
                             <hr/>
                             <p>Our departments</p>
@@ -62,7 +62,7 @@ class DefaultContent extends React.Component {
                                 Search
                             </button>
                         </div>
-                        <div className={`offset-md-1 col-md-4 col-12 ${s.contentBlock}`}>
+                        <div className={` ${s.contentBlock}`}>
                             <img src="" alt=""/>
                             <hr/>
                             <p>Calculator</p>
