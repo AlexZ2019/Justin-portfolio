@@ -9,7 +9,7 @@ let NavTrackingForm = ({handleSubmit}) => {
     return (
         <form onSubmit={handleSubmit}>
             <Field name={'ttn_text'} component={'input'} type="text" placeholder="Введіть номер посилки"/>
-            <button>
+            <button className={s["button"]}>
                 пошук
             </button>
         </form>)
@@ -22,29 +22,29 @@ const Navigation = (props) => {
         <div className={s["nav"] + " container-fluid fixed-top"}>
             <div className="container">
                 <div className="row">
-                    <div className={s['nav-logo'] + " col-6 col-sm-2"}>
+                    <div className={s['nav-logo'] + " col-4 col-sm-2 mr-sm-2 offset-0 offset-lg-1"}>
                         <NavLink to={'/'}>
                             <img src={logoImG} alt="logo"/>
                         </NavLink>
                     </div>
-                    <div className={s['nav-button'] + " col-1 ml-4"}>
-                        <button>
+                    <div className={s["nav-button"] + " ml-md-4 d-none d-sm-block"}>
+                        <button className={s["button"]}>
                             міжнародна доставка посилок
                         </button>
                     </div>
-                    <div className={s['nav-button'] + " col-1 ml-4"}>
-                        <button>
+                    <div className={s['nav-button'] + " ml-md-4 ml-sm-2 mr-1 d-none d-sm-block"}>
+                        <button className={s["button"]}>
                             кабінет приватним особам
                         </button>
                     </div>
-                    <div className={s['nav-call-us'] + " col-2"}>
+                    <div className={s['nav-call-us'] + " d-none d-sm-block"}>
                         <a href="">0-800-301-661</a>
                     </div>
-                    <div className={s['nav-input'] + " col-3"}>
+                    <div className={s['nav-input'] + " col-md-3 col-sm-4 d-none d-sm-block"}>
                         <NavTrackingFormRedux onSubmit={props.onParcelCheck}/>
                     </div>
-                    <nav role="navigation">
-                        <div id={s["menuToggle"]}>
+                    <nav role="navigation" className="offset-5 offset-sm-0">
+                        <div className={s["menu-toggle"]}>
 
                             <input type="checkbox" />
 
@@ -52,10 +52,13 @@ const Navigation = (props) => {
                             <span></span>
                             <span></span>
 
-                            <ul id={s["menu"]}>
+                            <ul className={s["menu"]}>
                                 <NavLink to={"/"} ><li>Головна</li></NavLink>
+                                <a href="#"><li className="d-sm-none">Міжнародна доставка посилок</li></a>
+                                <a href="#"><li className="d-sm-none">Кабінет приватним особам</li></a>
                                 <NavLink to={"/tracking"} ><li>Відслідкувати посилку</li></NavLink>
-                                <NavLink to={"/NearestDepartments"} ><li>Знайти найближче відділення</li></NavLink>
+                                <NavLink to={"/nearest-departments"} ><li>Знайти найближче відділення</li></NavLink>
+
                             </ul>
                         </div>
                     </nav>

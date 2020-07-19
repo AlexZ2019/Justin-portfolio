@@ -1,4 +1,25 @@
 @import "../../Main";
 .footer {
   background-color: $mainBackgroundColor;
+  padding: 25px 0;
+}
+.footer a {
+  color: #ffffff;
+}
+.footer a:hover {
+  color: #64ffff;
+  text-decoration: none;
+}
+.footer ul {
+  border-right: 1px solid white;
+}
+.footer ul:last-child {
+  border-right: 0;
+}
+.footer li {
+  margin: 0 0 10px 0;
+  list-style-type: none;
+}
+.footer p {
+  color: #ffffff;
 }

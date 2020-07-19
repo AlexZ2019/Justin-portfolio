@@ -17,7 +17,7 @@ function App () {
         <Route path={'/tracking'}
                render={() => <TrackingContainer />}
         />
-        <Route path={'/theNearestDepartments'}
+        <Route path={'/nearest-departments'}
                render={() => <NearestDepartmentsContainer />}
         />
         <Footer/>

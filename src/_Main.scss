@@ -1,0 +1,58 @@
+$mainBackgroundColor: #164ce2;
+$mainButtonColor: #64ffff;
+$mdSize: 991px;
+$smSize: 767px;
+$xsSize: 575px;
+
+body {
+  padding-top: 123px;
+  text-align: center;
+  @media (max-width: $mdSize) {
+    padding-top: 120px;
+  }
+  @media (max-width: $xsSize) {
+    padding-top: 110px;
+  }
+}
+
+.button {
+  background-color: $mainButtonColor;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 10px;
+  color: $mainBackgroundColor;
+}
+
+@mixin tablet-991 () {
+  .button {
+    font-size: 8px;
+  }
+  .nav-call-us {
+    font-size: 10px;
+    padding: 50px 15px;
+  }
+  .nav-input input {
+    &::placeholder {
+      font-size: 9px;
+    }
+  }
+}
+@mixin tablet-767 () {
+  .nav-call-us {
+    padding: 50px 5px;
+  }
+  .nav-button button {
+    width: 70px;
+  }
+  .nav-logo img {
+    width: 80px;
+
+  }
+}
+@mixin tablet-575 () {
+  .nav-logo img {
+    width: 125px;
+  }
+}

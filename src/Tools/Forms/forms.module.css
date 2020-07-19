@@ -1,12 +1,12 @@
-.formsControl input {
+.forms-control input {
   width: 200px;
 }
 
-.formsControl.error input {
+.forms-control.error input {
   border: 1px solid red;
 }
 
-.formsControl.error p {
+.forms-control.error p {
   color: red;
   font-size: 14px;
 }

@@ -1,8 +1,19 @@
 body {
-  padding-top: 124px;
+  padding-top: 123px;
   text-align: center;
 }
-body button {
+@media (max-width: 991px) {
+  body {
+    padding-top: 120px;
+  }
+}
+@media (max-width: 575px) {
+  body {
+    padding-top: 110px;
+  }
+}
+
+.button {
   background-color: #64ffff;
   text-transform: uppercase;
   border: 0;
@@ -15,21 +26,52 @@ body button {
 .nav {
   background-color: #164ce2;
 }
+@media (max-width: 991px) {
+  .nav .button {
+    font-size: 8px;
+  }
+  .nav .nav-call-us {
+    font-size: 10px;
+    padding: 50px 15px;
+  }
+  .nav .nav-input input::placeholder {
+    font-size: 9px;
+  }
+}
+@media (max-width: 767px) {
+  .nav .nav-call-us {
+    padding: 50px 5px;
+  }
+  .nav .nav-button button {
+    width: 70px;
+  }
+  .nav .nav-logo img {
+    width: 80px;
+  }
+}
+@media (max-width: 575px) {
+  .nav .nav-logo img {
+    width: 125px;
+  }
+}
 
 .nav-logo img {
   padding: 20px 0;
   width: 100%;
+  height: 110px;
 }
 
 .nav-button {
-  padding: 30px 30px 30px 0;
+  margin: 0;
+  padding: 30px 0;
 }
 .nav-button button {
   height: 50px;
+  width: 90px;
 }
 
 .nav-call-us {
-  padding: 50px 0;
+  padding: 50px 5px;
   font-size: 100%;
 }
 .nav-call-us a {
@@ -61,7 +103,7 @@ body button {
   margin-left: 15px;
 }
 
-#menuToggle {
+.menu-toggle {
   display: block;
   position: relative;
   top: 50px;
@@ -71,13 +113,13 @@ body button {
   user-select: none;
 }
 
-#menuToggle a {
+.menu-toggle a {
   text-decoration: none;
   color: #164ce2;
   transition: color 0.3s ease;
 }
 
-#menuToggle input {
+.menu-toggle input {
   display: block;
   width: 40px;
   height: 32px;
@@ -95,7 +137,7 @@ body button {
 /*
  * Just a quick hamburger
  */
-#menuToggle span {
+.menu-toggle span {
   display: block;
   width: 33px;
   height: 4px;
@@ -108,11 +150,11 @@ body button {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-#menuToggle span:first-child {
+.menu-toggle span:first-child {
   transform-origin: 0 0;
 }
 
-#menuToggle span:nth-last-child(2) {
+.menu-toggle span:nth-last-child(2) {
   transform-origin: 0 100%;
 }
 
@@ -120,41 +162,41 @@ body button {
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span {
+.menu-toggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
-#menuToggle input:checked ~ span:nth-last-child(3) {
+.menu-toggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2) {
+.menu-toggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-#menu {
+.menu {
   position: absolute;
   width: 415px;
-  margin: -100px 0 0 -50px;
+  margin: -90px 0 0 -20em;
   padding: 125px 15px 50px;
   background: #64ffff;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
   transform-origin: 0 0;
-  transform: translate(135%, 0);
+  transform: translate(300%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#menu li {
+.menu li {
   padding: 10px 0;
   font-size: 20px;
 }
 
-#menuToggle input:checked ~ ul {
+.menu-toggle input:checked ~ ul {
   transform: none;
 }
 

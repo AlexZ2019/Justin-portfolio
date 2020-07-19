@@ -54,19 +54,19 @@ class DefaultContent extends React.Component {
                 </div>
                 <div className={`container-fluid ${s.content}`}>
                     <div className={`row`}>
-                        <div className={` ${s.contentBlock}`}>
+                        <div className={s["content-block"] + " col-sm-4 col-12 offset-sm-2"}>
                             <img src="" alt=""/>
                             <hr/>
                             <p>Our departments</p>
-                            <button>
+                            <button className={s["button"]}>
                                 Search
                             </button>
                         </div>
-                        <div className={` ${s.contentBlock}`}>
+                        <div className={s["content-block"] + " col-sm-4 col-12 offset-sm-1"}>
                             <img src="" alt=""/>
                             <hr/>
                             <p>Calculator</p>
-                            <button>
+                            <button className={s["button"]}>
                                 Calculate department's price
                             </button>
                         </div>
@@ -77,7 +77,7 @@ class DefaultContent extends React.Component {
                             our partners
                         </h2>
                     </div>
-                    <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+                    <div id="carouselExampleIndicators" className={s["slider"] + " carousel slide"} data-ride="carousel">
                         <div className="carousel-inner">
                             <div className="carousel-item active mb-5 mt-3 pb-5">
                                 <img className="w-auto pr-5 offset-2"

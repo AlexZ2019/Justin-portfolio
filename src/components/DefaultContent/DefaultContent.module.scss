@@ -1,3 +1,30 @@
-h1 {
-  width: auto;
+@import "../../Main";
+.content {
+  background-image: url("../../images/1069061-302571386.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content-block {
+  background-color: white;
+  text-align: center;
+  padding: 30px;
+  bottom: 50px;
+  hr {
+    background-color: #d8ffff;
+    height: 2px;
+    border: 0;
+  }
+}
+
+.content h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+}
+
+.slider img {
+  height: 70px;
 }
