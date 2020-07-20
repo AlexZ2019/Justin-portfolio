@@ -1,15 +1,19 @@
 body {
   padding-top: 123px;
   text-align: center;
+  min-width: 320px;
 }
 @media (max-width: 991px) {
   body {
     padding-top: 120px;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   body {
     padding-top: 110px;
+  }
+  body .main-slider img {
+    height: 325px;
   }
 }
 
@@ -31,8 +35,7 @@ body {
 }
 
 .content-block {
-  background-color: white;
-  text-align: center;
+  background-color: #ffffff;
   padding: 30px;
   bottom: 50px;
 }
@@ -41,16 +44,39 @@ body {
   height: 2px;
   border: 0;
 }
+.content-block p {
+  font-size: 30%;
+  color: #017afe;
+}
+.content-block img {
+  height: 60px;
+}
+.content-block button {
+  height: 5em;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 75%;
+}
 
 .content h2 {
   text-align: center;
   text-transform: uppercase;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
+}
+
+.content p {
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .slider img {
   height: 70px;
+}
+@media (max-width: 653px) {
+  .slider img {
+    height: 40px;
+  }
 }
 
 /*# sourceMappingURL=DefaultContent.module.css.map */

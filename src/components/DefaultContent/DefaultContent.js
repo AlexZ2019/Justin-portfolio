@@ -1,6 +1,8 @@
 import React from "react";
-import s from './DefaultContent.module.css'
-import slide_1 from '../../images/slide_1.jpg'
+import s from "./DefaultContent.module.css";
+import slide_1 from "../../images/slide_1.jpg";
+import calculator from "../../images/calculator.png";
+import departments from "../../images/departments.png"
 import {Redirect} from "react-router";
 import {connect} from "react-redux";
 
@@ -21,11 +23,11 @@ class DefaultContent extends React.Component {
     render() {
         if (this.state.isRedirect === true) {
             return (
-                <Redirect to='/tracking'/>
+                <Redirect to="/tracking"/>
                 )}
         else
             return <>
-                <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                <div id="carouselExampleControls" className={s["main-slider"] + " carousel slide"} data-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
                             <img className={`d-block w-100`} src={slide_1} alt="First slide"/>
@@ -52,35 +54,35 @@ class DefaultContent extends React.Component {
                         <span className="sr-only">Next</span>
                     </a>
                 </div>
-                <div className={`container-fluid ${s.content}`}>
+                <div className={s["content"] + " container-fluid"}>
                     <div className={`row`}>
-                        <div className={s["content-block"] + " col-sm-4 col-12 offset-sm-2"}>
-                            <img src="" alt=""/>
-                            <hr/>
-                            <p>Our departments</p>
-                            <button className={s["button"]}>
-                                Search
-                            </button>
-                        </div>
                         <div className={s["content-block"] + " col-sm-4 col-12 offset-sm-1"}>
-                            <img src="" alt=""/>
+                            <img src={departments} alt={departments}/>
                             <hr/>
-                            <p>Calculator</p>
+                            <p>Наші відділення</p>
                             <button className={s["button"]}>
-                                Calculate department's price
+                                Пошук
                             </button>
                         </div>
-                        <div className='offset-2 mt-5'>
+                        <div className={s["content-block"] + " col-sm-4 col-12 offset-sm-2"}>
+                            <img src={calculator} alt="calculator"/>
+                            <hr/>
+                            <p>Калькулятор</p>
+                            <button className={s["button"]}>
+                                Розрахувати ціну відділення
+                            </button>
+                        </div>
+                        <div className=" mt-5">
                             <img src="https://justin.ua/wp-content/uploads/2019/04/500_pravka-1024x148.png" alt=""/>
                         </div>
-                        <h2 className='mt-5 col-md-12'>
+                        <h2 className="mt-5 col-md-12">
                             our partners
                         </h2>
                     </div>
                     <div id="carouselExampleIndicators" className={s["slider"] + " carousel slide"} data-ride="carousel">
                         <div className="carousel-inner">
                             <div className="carousel-item active mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -92,7 +94,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -104,7 +106,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -116,7 +118,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -128,7 +130,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -140,7 +142,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -152,7 +154,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -164,7 +166,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -176,7 +178,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -188,7 +190,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -200,7 +202,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -212,7 +214,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -224,7 +226,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -236,7 +238,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -248,7 +250,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -260,7 +262,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -272,7 +274,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -284,7 +286,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -296,7 +298,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -308,7 +310,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
@@ -320,7 +322,7 @@ class DefaultContent extends React.Component {
                                      alt="fourth slide"/>
                             </div>
                             <div className="carousel-item mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 offset-2"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
                                 <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"

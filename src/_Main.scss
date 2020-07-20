@@ -7,11 +7,16 @@ $xsSize: 575px;
 body {
   padding-top: 123px;
   text-align: center;
+  min-width: 320px;
   @media (max-width: $mdSize) {
     padding-top: 120px;
   }
-  @media (max-width: $xsSize) {
+  
+  @media (max-width: $smSize) {
     padding-top: 110px;
+    .main-slider img {
+      height: 325px;
+    }
   }
 }
 
@@ -29,10 +34,12 @@ body {
   .button {
     font-size: 8px;
   }
+
   .nav-call-us {
     font-size: 10px;
     padding: 50px 15px;
   }
+
   .nav-input input {
     &::placeholder {
       font-size: 9px;
@@ -40,16 +47,7 @@ body {
   }
 }
 @mixin tablet-767 () {
-  .nav-call-us {
-    padding: 50px 5px;
-  }
-  .nav-button button {
-    width: 70px;
-  }
-  .nav-logo img {
-    width: 80px;
 
-  }
 }
 @mixin tablet-575 () {
   .nav-logo img {

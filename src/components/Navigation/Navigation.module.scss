@@ -27,7 +27,7 @@
   }
 
 .nav-call-us {
-  padding: 50px 5px;
+  padding: 50px 15px;
   font-size: 100%;
 
   a {
@@ -38,18 +38,19 @@
     }
   }
 }
-
+.nav form {
+  margin: 0 -8px;
+}
 .nav-input {
   padding: 40px 0;
   input {
     height: 40px;
     background-color: $mainBackgroundColor;
-    color: #ffffff;
     border: 1px solid #ffffff;
     padding: 10px;
     width: 70%;
     &::placeholder {
-      color: white;
+      color: #ffffff;
       font-size: 80%;
     }
   }
@@ -132,7 +133,7 @@
 .menu-toggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: $mainBackgroundColor;
 }
 
 .menu-toggle input:checked ~ span:nth-last-child(3) {
@@ -156,15 +157,16 @@
   /* to stop flickering of text in safari */
 
   transform-origin: 0 0;
-  transform: translate(300%, 0);
+  transform: translate(1000%, 0);
 
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 .menu li
 {
-  padding: 10px 0;
+  padding: 5px 40px;
   font-size: 20px;
+  text-align: left;
 }
 
 .menu-toggle input:checked ~ ul

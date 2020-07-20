@@ -1,15 +1,19 @@
 body {
   padding-top: 123px;
   text-align: center;
+  min-width: 320px;
 }
 @media (max-width: 991px) {
   body {
     padding-top: 120px;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   body {
     padding-top: 110px;
+  }
+  body .main-slider img {
+    height: 325px;
   }
 }
 
@@ -39,10 +43,6 @@ body {
 
 .footer ul {
   border-right: 1px solid white;
-}
-
-.footer ul:last-child {
-  border-right: 0;
 }
 
 .footer li {
