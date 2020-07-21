@@ -2,6 +2,8 @@ import React from "react";
 import NearestDepartments from "./NearestDepartments";
 import {connect} from "react-redux";
 import {getTnD} from "../../Redux/reducers/NearestDepartment-reducer";
+import {getNearestDepartmentResult} from "../../Redux/selectors/NearestDepartmentsSelector";
+import {getIsFetching} from "../../Redux/selectors/commonSelector";
 
 
 class NearestDepartmentsApI extends React.Component {
@@ -25,8 +27,8 @@ class NearestDepartmentsApI extends React.Component {
 }
 let mapDispatchToProps = (state) => {
     return {
-        result: state.NearestDepartmentsReducer.result,
-        isFetching: state.PreloaderReducer.isFetching
+        result: getNearestDepartmentResult(state),
+        isFetching: getIsFetching(state)
         // address_text: state.TheNearestDepartmentsReducer.address_text
     }
 }

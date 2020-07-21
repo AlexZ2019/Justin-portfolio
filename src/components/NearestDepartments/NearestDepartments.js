@@ -54,7 +54,7 @@ let NearestDepartments = ({result, onAddressCheck, isFetching}) => {
                         </th>
                     </tr>
                     {result.map(element => {
-                        return <>
+                        return <React.Fragment>
                             <tr>
                                 <td>
                                     {element.number}
@@ -69,7 +69,7 @@ let NearestDepartments = ({result, onAddressCheck, isFetching}) => {
                                     {element.type}
                                 </td>
                             </tr>
-                        </>
+                        </React.Fragment>
                     })} </table> : <div className='mt-3'>
                     Введіть потрібну адресу
                 </div>}

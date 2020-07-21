@@ -2,6 +2,8 @@ import React from "react";
 import {connect} from "react-redux";
 import Tracking from "./Tracking";
 import {getTracking} from "../../Redux/reducers/Tracking-reducer";
+import {trackingResult} from "../../Redux/selectors/TrackingSelector";
+import {getIsFetching} from "../../Redux/selectors/commonSelector";
 
 
 class TrackingContainerApI extends React.Component {
@@ -29,8 +31,8 @@ class TrackingContainerApI extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-        result: state.TrackingReducer.result,
-        isFetching: state.PreloaderReducer.isFetching
+        result: trackingResult(state),
+        isFetching: getIsFetching(state)
         // ttn_text: state.trackingReducer.ttn_text
     }
 }
