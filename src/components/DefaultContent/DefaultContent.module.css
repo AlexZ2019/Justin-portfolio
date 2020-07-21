@@ -33,10 +33,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .content-block {
   background-color: #ffffff;
-  padding: 30px;
+  padding: 50px 45px;
   bottom: 50px;
 }
 .content-block hr {
@@ -45,17 +44,30 @@ body {
   border: 0;
 }
 .content-block p {
-  font-size: 30%;
+  font-size: 125%;
   color: #017afe;
+  font-weight: bold;
 }
 .content-block img {
   height: 60px;
 }
 .content-block button {
   height: 5em;
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 15px;
   font-size: 75%;
+}
+@media (max-width: 767px) {
+  .content-block {
+    padding: 40px 30px;
+  }
+  .content-block button {
+    font-size: 60%;
+    padding: 10px;
+  }
+  .content-block p {
+    font-size: 100%;
+  }
 }
 
 .content h2 {
@@ -65,18 +77,8 @@ body {
   font-weight: bold;
 }
 
-.content p {
-  font-weight: bold;
-  font-size: 30px;
-}
-
 .slider img {
   height: 70px;
-}
-@media (max-width: 653px) {
-  .slider img {
-    height: 40px;
-  }
 }
 
 /*# sourceMappingURL=DefaultContent.module.css.map */

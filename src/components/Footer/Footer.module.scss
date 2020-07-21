@@ -1,23 +1,43 @@
 @import "../../Main";
+
 .footer {
   background-color: $mainBackgroundColor;
   padding: 25px 0;
+  text-align: left;
+  font-size: 100%;
 }
+
+.footer img {
+  height: 20px;
+  margin-right: 10px;
+}
+
 .footer a {
   color: #ffffff;
 }
+
 .footer a:hover {
   color: #64ffff;
   text-decoration: none;
 }
+
 .footer ul {
-  border-right: 1px solid white;
+  border-right: 1px solid #ffffff;
+  @media (max-width: $smSize) {
+    border: 0;
+  }
+}
+
+.footer .list-without-borders {
+  border: 0;
 }
 
 .footer li {
   margin: 0 0 10px 0;
   list-style-type: none;
 }
+
 .footer p {
   color: #ffffff;
+  font-size: 75%;
 }
