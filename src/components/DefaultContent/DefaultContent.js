@@ -80,14 +80,14 @@ class DefaultContent extends React.Component {
                     <div id="carouselExampleIndicators" className={s["slider"] + " carousel slide"} data-ride="carousel">
                         <div className="carousel-inner">
                             <div className="carousel-item active mb-5 mt-3 pb-5">
-                                <img className="w-auto pr-5 ml-5 col-sm-6"
+                                <img className="w-auto pr-5 ml-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="first slide"/>
-                                <img className="w-auto pr-5 col-sm-6"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
                                      alt="second slide"/>
-                                <img className="w-auto pr-5 col-sm-6"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png" alt="third slide"/>
-                                <img className="w-auto pr-5 col-sm-6"
+                                <img className="w-auto pr-5"
                                      src="https://justin.ua/uploads/symlink/0_1000/42_bigl_logo.png"
                                      alt="fourth slide"/>
                             </div>
