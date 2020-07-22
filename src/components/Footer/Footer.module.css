@@ -30,7 +30,7 @@ body {
 .footer {
   background-color: #164ce2;
   padding: 25px 0;
-  text-align: left;
+  text-align: center;
   font-size: 100%;
 }
 
@@ -50,6 +50,7 @@ body {
 
 .footer ul {
   border-right: 1px solid #ffffff;
+  text-align: left;
 }
 @media (max-width: 767px) {
   .footer ul {
@@ -66,9 +67,30 @@ body {
   list-style-type: none;
 }
 
+.contacts img {
+  text-align: center;
+}
+
 .footer p {
   color: #ffffff;
   font-size: 75%;
+  text-align: left;
+}
+
+.privacy-police {
+  font-size: 75%;
+}
+
+@media (max-width: 575px) {
+  .footer {
+    text-align: left;
+  }
+  .footer p {
+    font-size: 100%;
+  }
+  .footer .privacy-police {
+    font-size: 100%;
+  }
 }
 
 /*# sourceMappingURL=Footer.module.css.map */

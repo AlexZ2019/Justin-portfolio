@@ -3,7 +3,7 @@
 .footer {
   background-color: $mainBackgroundColor;
   padding: 25px 0;
-  text-align: left;
+  text-align: center;
   font-size: 100%;
 }
 
@@ -23,6 +23,7 @@
 
 .footer ul {
   border-right: 1px solid #ffffff;
+  text-align: left;
   @media (max-width: $smSize) {
     border: 0;
   }
@@ -37,7 +38,27 @@
   list-style-type: none;
 }
 
+.contacts img {
+  text-align: center;
+}
+
 .footer p {
   color: #ffffff;
   font-size: 75%;
+  text-align: left;
+}
+.privacy-police {
+  font-size: 75%;
+}
+
+.footer {
+  @media (max-width: $xsSize) {
+    text-align: left;
+    p {
+      font-size: 100%;
+    }
+    .privacy-police {
+      font-size: 100%;
+    }
+  }
 }

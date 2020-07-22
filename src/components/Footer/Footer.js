@@ -27,8 +27,8 @@ const Footer = () => {
                 <li><a href="#">Новини</a></li>
                 <li><a href="#">Контакти</a></li>
             </ul>
-            <p className="offset-1 col-3">Justin © 2020</p>
-            <p className="offset-1 col-3">
+            <p className="offset-1 col-11 col-sm-2">Justin © 2020</p>
+            <div className={s["contacts"] + " offset-1 col-11 col-sm-4"}>
                 <a href="#">
                     <img src={fbLogo} alt="Facebook Logo"/>
                 </a>
@@ -41,10 +41,8 @@ const Footer = () => {
                 <a href="#">
                     <img src={messengerLogo} alt="Messenger Logo"/>
                 </a>
-            </p>
-            <p className="offset-1 col-3">
-                <a href="#">Політика конфіденційності</a>
-            </p>
+            </div>
+                <a className={s["privacy-police"] + " offset-1 offset-sm-0 col-11 col-sm-3 mt-3 mt-sm-0"} href="#">Політика конфіденційності</a>
         </div>
     </div>
 }
