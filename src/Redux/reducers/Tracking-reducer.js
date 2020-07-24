@@ -32,17 +32,16 @@ export const setStatus = (result) => (
     {type: GET_STATUS, result}
 )
 
-export const getTracking = (ttn_text) => dispatch => {
+export const getTracking = (ttn_text) => async dispatch => {
     dispatch(isFetching(true))
-    TrackingApI.getStatus(ttn_text).then(data => {
+    let response = await TrackingApI.getStatus(ttn_text)
         dispatch(isFetching(false))
-        if (data.status === 1) {
-            dispatch(setStatus(data.result[0]))
-        } else if (data.status === 0) {
-            dispatch(setStatus(data.msg.ua))
+        if (response.status === 1) {
+            dispatch(setStatus(response.result[0]))
+        } else if (response.status === 0) {
+            dispatch(setStatus(response.msg.ua))
         }
         dispatch(reset('tracking'))
-    })
 }
 
 export default TrackingReducer;

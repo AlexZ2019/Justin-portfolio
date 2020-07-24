@@ -8,6 +8,7 @@ body {
   padding-top: 123px;
   text-align: center;
   min-width: 320px;
+  height: 100%;
   @media (max-width: $mdSize) {
     padding-top: 120px;
   }

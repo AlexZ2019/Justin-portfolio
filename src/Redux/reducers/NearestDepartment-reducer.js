@@ -32,18 +32,17 @@ export const setStatus = (result) => (
     {type: GET_DEPARTMENTS, result}
 )
 
-export const getTnD = (address) => dispatch => {
+export const getTnD = (address) => async dispatch => {
     dispatch(isFetching(true))
-    TrackingApI.getNearestDepartments(address).then(data => {
+    let response = await TrackingApI.getNearestDepartments(address)
         dispatch(isFetching(false))
-            if (data.status === 1) {
-                dispatch(setStatus(data.result))
+            if (response.status === 1) {
+                dispatch(setStatus(response.result))
             }
             // } else if (data.status === 0) {
             //     dispatch(setStatus(data.msg.ua))
             // }
             dispatch(reset('tracking'))
-        }
-    )
 }
+
 export default NearestDepartmentsReducer

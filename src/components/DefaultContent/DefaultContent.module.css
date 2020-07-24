@@ -2,6 +2,7 @@ body {
   padding-top: 123px;
   text-align: center;
   min-width: 320px;
+  height: 100%;
 }
 @media (max-width: 991px) {
   body {
@@ -75,15 +76,6 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   font-weight: bold;
-}
-
-.slider img {
-  height: 50px;
-}
-@media (max-width: 578px) {
-  .slider img {
-    height: 25px;
-  }
 }
 
 /*# sourceMappingURL=DefaultContent.module.css.map */
