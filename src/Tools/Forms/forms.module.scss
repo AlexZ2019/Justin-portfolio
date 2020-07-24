@@ -1,0 +1,22 @@
+@import "../../Main";
+
+.forms-control {
+  display: flex;
+  justify-content: center;
+}
+
+.forms-control input {
+  width: 200px;
+  border-radius: 10px;
+  height: 35px;
+  border: 2px solid #000000;
+}
+
+.forms-control.error input {
+  border: 2px solid #ff0000;
+}
+
+.forms-control.error p {
+  color: #ff0000;
+  font-size: 14px;
+}

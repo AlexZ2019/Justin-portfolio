@@ -1,3 +1,51 @@
+body {
+  padding-top: 123px;
+  text-align: center;
+  min-width: 320px;
+  height: 100%;
+}
+@media (max-width: 991px) {
+  body {
+    padding-top: 120px;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    padding-top: 110px;
+  }
+  body .main-slider img {
+    height: 325px;
+  }
+}
 
+input :active, :focus {
+  outline: none;
+}
+
+button:active, button:focus {
+  outline: none;
+}
+
+.button {
+  background-color: #64ffff;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 10px;
+  color: #164ce2;
+}
+
+.get-status button {
+  height: 35px;
+}
+
+.content {
+  min-height: calc(100vh - 359px);
+}
+
+.content {
+  min-height: calc(100vh - 359px);
+}
 
 /*# sourceMappingURL=Tracking.module.css.map */

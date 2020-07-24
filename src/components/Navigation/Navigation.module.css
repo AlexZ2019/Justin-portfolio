@@ -18,6 +18,14 @@ body {
   }
 }
 
+input :active, :focus {
+  outline: none;
+}
+
+button:active, button:focus {
+  outline: none;
+}
+
 .button {
   background-color: #64ffff;
   text-transform: uppercase;
@@ -26,6 +34,14 @@ body {
   font-weight: bold;
   font-size: 10px;
   color: #164ce2;
+}
+
+.get-status button {
+  height: 35px;
+}
+
+.content {
+  min-height: calc(100vh - 359px);
 }
 
 .nav {
